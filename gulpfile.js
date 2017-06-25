@@ -7,14 +7,10 @@ var watch = require('gulp-watch');
 //setting
 var settings = require('./gulpfile_settings');
 
-gulp.task('watch', ['html', 'webpack', 'css', 'img', 'font'], function(){
+gulp.task('watch', ['html', 'webpack', 'img', 'font'], function(){
     gulp.watch(
         settings.watch.html.files,
         ['html']
-    );
-    gulp.watch(
-        settings.watch.cssBase.dir,
-        ['css']
     );
     gulp.watch(
         [
